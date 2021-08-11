@@ -1,0 +1,49 @@
+extends layout
+
+block content
+
+  h1.visually-hidden
+
+  main.container(role='main')
+
+    section.px-4.py-5.text-center 
+      h1 William Power
+
+    div.album.py-5
+      div.container
+        div.row
+
+          //- Single Card Template
+          div.col-md-4
+            div.card.mb-4.shadow-sm
+              .hero.px-2.py-2
+                img(src='images/ex_traffic.png').rounded.img-fluid
+                h3.fw-bold.lh-base Traffic
+
+              .card-body 
+                p.card-text Create roads and intersections, and fill your network with cars.
+                button(href='/demos/traffic').btn.btn-primary Demo
+                button(href='www.github.com').btn.btn-primary Repo
+
+          div.col-md-4
+            div.card.mb-4.shadow-sm
+              .hero.px-2.py-2
+                img(src='images/ex_beebc.png').rounded.img-fluid
+                h3.fw-bold Emulator
+
+              .card-body 
+                p.card-text Implementation of the 'Simple As Possible' (SAP-1) architecture. This is the architecture taught by Ben Eater in his youtube series on constructing a breadboard computer.  
+                button(href='/demos/beebc').btn.btn-primary Demo
+                button(href='www.github.com').btn.btn-primary Repo
+
+          div.col-md-4
+            div.card.mb-4.shadow-sm
+              .hero.px-2.py-2
+                img(src='images/ex_physics.png').rounded.img-fluid
+                h3.fw-bold.lh-base Physics
+
+              .card-body 
+                p.card-text Simple javascript physics engine using a really inaccurate model of magnetic attraction instead of gravity. 
+                button(href='/demos/physics').btn.btn-primary Demo
+                button(href='www.github.com').btn.btn-primary Repo
+

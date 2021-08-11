@@ -1,0 +1,22 @@
+{
+  "name": "powcraft",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "watch-sass": "sass --watch src/scss:public/stylesheets"
+  },
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "pizzicato": "^0.6.4",
+    "tone": "^14.7.77",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2"
+  }
+}

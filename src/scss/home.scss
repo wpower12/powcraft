@@ -1,0 +1,51 @@
+@import "../../lib/scss/bootstrap/bootstrap";
+// @import "../../lib/scss/bootstrap/functions";
+// @import "../../lib/scss/bootstrap/variables";
+// @import "../../lib/scss/bootstrap/mixins";
+
+
+.hero {
+	// display: inline-block;
+
+	img {
+		display: inline;
+		max-height: 10rem;
+		max-width: 50%;
+		opacity: 0.75;
+		margin-right: 1rem;
+	}
+
+	h3 {
+		display: inline;
+	}
+}
+
+.card {
+	// margin: 4px;
+}
+
+.card-body {
+	button {
+		margin-right: 1rem;
+	}
+
+	// padding: 4px;
+}
+
+.strum-pattern {
+	letter-spacing: 2px;
+}
+
+.controls {
+	display: inline;
+	
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	width: 100px;
+
+	font-size: 50px;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 8px;
+}
