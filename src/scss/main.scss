@@ -1,0 +1,60 @@
+$border-radius: 1.0rem;
+
+// These are the color keywords you should override, and then
+// use in subsquent custom css. The override will cascade through
+// the bootstrap.
+
+// $primary:       #726A95;
+// $secondary:     #301B3F;
+
+$primary:       #301B3F;
+$secondary:     #726A95;
+
+// $success:       lt;
+// $info:          t;
+// $warning:       ult;
+// $danger:        ;
+$light:         #A0C1B8;
+$dark:          #1e1624;
+// $light:         #301B3F;
+// $dark:          #A0C1B8;
+
+// These are the 'major' color classes
+$body-bg:    $primary;
+// $body-color: $secondary;
+
+$body-color: $primary;
+$font-color: #6E85B2;
+
+@import "../../lib/scss/bootstrap/v5.0.2/bootstrap"; 
+
+@font-face {
+	font-family: 'Roboto-Mono';
+	src: url('RobotoMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Roboto-Mono-Bold';
+	src: url('RobotoMono-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Raleway-Bold';
+	src: url('Raleway-Medium.ttf') format('truetype');
+}
+
+
+.card {
+	background-color: tint_color($body-color, 5%);
+	color: $font-color;
+	box-shadow: $box-shadow-lg;
+}
+
+.body {
+	font-family: 'Roboto-Mono', mono;
+}

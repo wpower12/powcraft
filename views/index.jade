@@ -1,49 +1,47 @@
 extends layout
 
+include mixins/star-rating
+include mixins/project-card
+
+block headers
+  link(rel='stylesheet', href='/stylesheets/home.css')
+
 block content
 
-  h1.visually-hidden
+  div.bio
+    section.px-5.py-5.text-center
+      //- h1 William Power
+      h1.py-2 WILLIAM POWER
+      div.text-start.py-4.px-5
+        p Hi. This are words I would say to make a person think I'm cool. 
+        p resume, linkedin?, research site?, github?
 
-  main.container(role='main')
+  div.container.projects.py-5
+    div.row.justify-content-sm-center
+      //- Single Card Template
+      +project('Strums', 'Enumerating all of the basic 8th note struming patterns.', '/demos/strums', 'https://github.com', 'images/ex_traffic.png')
 
-    section.px-4.py-5.text-center 
-      h1 William Power
+      +project('Emulator', 'Implementation of the \'Simple As Possible\' (SAP-1) architecture.', 'demos/emulator', 'https://github.com', 'images/ex_beebc.png')
+ 
+    div.row.justify-content-sm-center
+      +project('Traffic', 'Create roads and intersections, and fill your network with cars.', 'demos/traffic', 'https://github.com', 'images/ex_traffic.png')
 
-    div.album.py-5
-      div.container
-        div.row
+      +project('Physics', 'Simple, interactive javascript physics simulation.', 'demos/physics', 'https://github.com', 'images/ex_physics.png')
 
-          //- Single Card Template
-          div.col-md-4
-            div.card.mb-4.shadow-sm
-              .hero.px-2.py-2
-                img(src='images/ex_traffic.png').rounded.img-fluid
-                h3.fw-bold.lh-base Traffic
+  div.container.competencies.py-4.mb-4
 
-              .card-body 
-                p.card-text Create roads and intersections, and fill your network with cars.
-                button(href='/demos/traffic').btn.btn-primary Demo
-                button(href='www.github.com').btn.btn-primary Repo
+    div.row.justify-content-sm-center.py-2
+      +rating("python", 5, 5) 
+      +rating("js", 5, 5)
+    div.row.justify-content-sm-center.py-2
+      +rating("html/css", 4, 5)
+      +rating("java", 4, 5)
+    div.row.justify-content-sm-center.py-2
+      +rating("php", 3, 5)
+      +rating("sql", 3, 5)
+    div.row.justify-content-sm-center.py-2
+      +rating("juggling", 4, 5)
+      +rating("chess", 1, 5)
 
-          div.col-md-4
-            div.card.mb-4.shadow-sm
-              .hero.px-2.py-2
-                img(src='images/ex_beebc.png').rounded.img-fluid
-                h3.fw-bold Emulator
-
-              .card-body 
-                p.card-text Implementation of the 'Simple As Possible' (SAP-1) architecture. This is the architecture taught by Ben Eater in his youtube series on constructing a breadboard computer.  
-                button(href='/demos/beebc').btn.btn-primary Demo
-                button(href='www.github.com').btn.btn-primary Repo
-
-          div.col-md-4
-            div.card.mb-4.shadow-sm
-              .hero.px-2.py-2
-                img(src='images/ex_physics.png').rounded.img-fluid
-                h3.fw-bold.lh-base Physics
-
-              .card-body 
-                p.card-text Simple javascript physics engine using a really inaccurate model of magnetic attraction instead of gravity. 
-                button(href='/demos/physics').btn.btn-primary Demo
-                button(href='www.github.com').btn.btn-primary Repo
-
+  div.footer.ma-4.py-5.text-center
+    | (tm) me. 2021-2021? idk. 

@@ -1,0 +1,61 @@
+@import "main";
+
+.splash {
+	background-color: $body-color;
+	color: $font-color;
+}
+
+.strum-pattern {
+	font-size: 2rem;
+	letter-spacing: 2px;
+}
+
+.controls {
+	display: inline;
+	
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	width: 100px;
+
+	font-size: 50px;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 8px;
+}
+
+// breakpoint tweaks. 
+@include media-breakpoint-up(sm) {
+  .strum-pattern {
+    font-size: 1.3rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .strum-pattern {
+    font-size: 1.5rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .strum-pattern {
+    font-size: 1.5rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .strum-pattern {
+    font-size: 2.0rem;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .strum-pattern {
+    font-size: 2.5rem;
+  }
+}
+
+h3[data-bits='10110111']::after {
+	position: absolute;
+	content: '🌴';
+}

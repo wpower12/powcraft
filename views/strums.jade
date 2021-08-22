@@ -1,19 +1,24 @@
 extends layout
 
+block headers
+	link(rel='stylesheet', href='/stylesheets/strums.css')
+
 block content
 
-	div.container
-		div.main If you only care about 8th notes, and strum down on even 8ths, and up on odd 8ths, you can enumerate all the possible simple strums! Since we have 8 binary choices, we get 2^8 possible strums. We can count up from 0 to 256 in binary and treat a 1 as 'hit the strum at this position'. So here they all are! Click a strum pattern to start playing a sample, use the stop sign to stop it. Fun fact; using this system the 'island strum' is the 183rd strum. 
+	main.container(role='main')
+		div.container.splash.shadow-lg.rounded-3.py-2
+			div.main.font-monospace 
+				h3 Some Strums
+				p If you only care about 8th notes, and strum down on even 8ths, and up on odd 8ths, you  	can enumerate all the possible simple strums! Since we have 8 binary choices, we get 2^8 possible strums. We can count up from 0 to 256 in binary and treat a 1 as 'hit the strum at this position'. So here they all are! Click a strum pattern to start playing a sample, use the stop sign to stop it. Fun fact; using this system the 'island strum' is the 183rd strum. 
 
-	div.album.py-5
-		div.container
+		div.album.py-2
 			for row in strums
 				div.row
 					for s in row
-						div.col-sm-3
+						div.col-sm-3.py-1.px-1
 							div.card.shadow-sm
 								div.card-body.text-center
 									h3.strum-pattern(data-bits= s[0])= s[1]
-	div.controls.card#stop
-		🛑 
+		div.controls.card#stop
+			🛑 
 	script(src='/javascripts/strums.bundle.js')

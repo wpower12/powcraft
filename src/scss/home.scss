@@ -1,51 +1,117 @@
-@import "../../lib/scss/bootstrap/bootstrap";
-// @import "../../lib/scss/bootstrap/functions";
-// @import "../../lib/scss/bootstrap/variables";
-// @import "../../lib/scss/bootstrap/mixins";
+@import "main";
+
+.btn-outline-primary:hover {
+	color: darken($secondary, 20%);
+}
+
+.rating {
+	background-color: $dark;
+	height: 2rem;
+	vertical-align: middle;
+	color: $secondary;
+
+	border-style: solid;
+	border-width: 0.15rem;
+	border-color: $secondary;
+}
+
+.rating-label {
+	display: inline-block;
+	width: 40%;
+	font-family: 'Roboto-Mono';
+	font-size: 10px;
+}
+
+.rating-stars {
+	display: inline-block;
+	width: 60%;
+	text-align: center;
+}
+
+.star {
+	width: 20%;
+	display: inline;
+}
 
 
-.hero {
-	// display: inline-block;
+.bio {
+	color: darken($font-color, 15%);	
+	margin-left: 0px;
+	background-color: $dark;
+}
 
-	img {
-		display: inline;
-		max-height: 10rem;
-		max-width: 50%;
-		opacity: 0.75;
-		margin-right: 1rem;
-	}
-
-	h3 {
-		display: inline;
-	}
+h1 {
+	color: $font-color;
+	font-family: 'Raleway';
 }
 
 .card {
-	// margin: 4px;
+	min-width: 300px;
+	border-style: solid;
+	border-width: 0.15rem;
+	border-color: darken($body-color, 5%);
+}
+
+.hero {
+	h3 {
+		font-family: 'Raleway-Bold';
+		letter-spacing: .1rem;
+		font-size: 1.5rem;
+		display: inline-block;
+		width: 50%;
+	}
+
+	.links {
+		display: inline-block;
+		width: 50%;
+		text-align: right;
+	}
+}
+
+.btn {
+	border-width: 1px;
+	color: $secondary;
+	svg {
+		display: block;
+		margin: auto;
+		height: 24px;
+		width: 24px;
+	}
 }
 
 .card-body {
-	button {
-		margin-right: 1rem;
+	font-family: 'Roboto-Mono', mono;
+	img {
+		vertical-align: middle;
+		display: inline-block;
+		width: 25%;
 	}
+	// div {
+	// 	vertical-align: middle;
+	// 	display: inline-block;
+	// 	img {
+	// 		width: 25%;
 
-	// padding: 4px;
+	// 	}
+	// }
 }
 
-.strum-pattern {
-	letter-spacing: 2px;
+.card-text {
+	display: inline-block;
+	width: 75%;
 }
 
-.controls {
-	display: inline;
-	
-	position: fixed;
-	bottom: 5px;
-	right: 5px;
-	width: 100px;
+.corner-img {
+	// position: absolute;
+	// bottom: 5px;
+	// right: 5px;
+	// width: 100px;
 
-	font-size: 50px;
-	text-align: center;
-	vertical-align: middle;
-	padding-top: 8px;
+	// z-index: 0;
+	width: 25%;
+}
+
+.footer {
+	background-color: $dark;
+	color: darken($font-color, 20%);
 }

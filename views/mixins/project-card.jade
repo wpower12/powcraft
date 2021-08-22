@@ -1,0 +1,13 @@
+mixin project(title, description, demo_link, gh_link, img_path)
+	div.col.col-md-5
+		div.card.mb-4.px-2.py-2
+			.hero.px-2.py-2
+				h3.fw-bold.lh-base= title
+				div.links
+					a(href=demo_link).btn.btn-outline-primary.shadow.mx-2
+						include ../../src/images/arrow-up-right.svg
+					a(href=gh_link).btn.btn-outline-primary.shadow.mx-2
+						include ../../src/images/github.svg
+			.card-body
+				p.card-text.px-2= description
+				img(src=img_path).rounded

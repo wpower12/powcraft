@@ -1,0 +1,11 @@
+mixin rating(label, n, out_of)
+	div.col.col-md-4
+		div.rating.rounded.shadow-lg
+			div.rating-label.text-end.fs-6=label
+			div.rating-stars
+				- for (var i=0; i < out_of; i++)
+					div.star 
+						- if (i < n)
+							include ../../src/images/star-fill.svg
+						- else
+							include ../../src/images/star.svg
