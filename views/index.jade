@@ -13,11 +13,10 @@ block content
       div.row.px-2.py-3.justify-content-sm-center
         //- h1 William Power
         .col.col-md-5
-          h1.py-2 WILLIAM POWER
-          div.text-start.py-4.mx-3.px-2
-            p I'm a PhD Candidate who likes to make things! I enjoy researching and tinkering. Currently researching machine learning methods for extracting community structure from online social networks. I'm interested in ways to improve election forecasting and polling using data mined from such communities. I'm always on the lookout for opportunities to help others build and learn!
-            p I work in the #[a(href='https://dabi.temple.edu/').inline-link DABI Lab], Temple Universities Data Analytics and Bioinformations group. I've also been lucky to work with the Temple AGI Team (#[a(href='https://cis.temple.edu/tagit/').inline-link TAGIT]). 
-            div.links
+          h1.mb-4 WILLIAM POWER
+
+          div.text-start.mx-3.px-2
+            div.links.mb-4
               a(href='https://github.com/wpower12').btn.btn-outline-primary.shadow.mx-2
                 include ../src/images/github.svg
               a(href='https://www.linkedin.com/in/wkp3engineer/').btn.btn-outline-primary.shadow.mx-2
@@ -25,23 +24,14 @@ block content
               a(href='mailto:willpowe@gmail.com').btn.btn-outline-primary.shadow.mx-2
                 include ../src/images/email.svg
 
+            p.py-2 I'm a PhD Candidate who likes to make things! I enjoy researching and tinkering. Currently researching machine learning methods for extracting community structure from online social networks. I'm interested in ways to improve election forecasting and polling using data mined from such communities. I'm always on the lookout for opportunities to help others build and learn!
+            p I work in the #[a(href='https://dabi.temple.edu/').inline-link DABI Lab], Temple Universities Data Analytics and Bioinformations group. I've also been lucky to work with the Temple AGI Team (#[a(href='https://cis.temple.edu/tagit/').inline-link TAGIT]). 
+            
 
         .col.col-md-5.headshot
           img(src='/images/lego_grad.png').rounded
 
-  div.container.projects.py-5
-    div.row.justify-content-sm-center
-      //- Single Card Template
-      +project('Strums', 'Enumerating all of the basic 8th note struming patterns.', '/demos/strums', 'https://github.com/wpower12/powcraft/blob/master/src/js/strums.js', 'images/strums.png')
-
-      +project('Emulator', 'Implementation of the \'Simple As Possible\' (SAP-1) architecture.', 'demos/emulator', 'https://github.com/wpower12/jsBEEBC', 'images/beebc.png')
- 
-    div.row.justify-content-sm-center
-      +project('Traffic', 'Create roads and intersections, and fill your network with cars.', 'demos/traffic', 'https://github.com/wpower12/powcraft/tree/master/src/js/traffic', 'images/ex_traffic.png')
-
-      +project('Physics', 'Simple, interactive javascript physics simulation.', 'demos/physics', 'https://github.com/wpower12/powcraft/tree/master/src/js/forces', 'images/ex_physics.png')
-
-  div.container.competencies.py-4.mb-4
+  div.container.competencies.py-4
 
     div.row.justify-content-sm-center
       +rating("python", 5, 5) 
@@ -55,6 +45,24 @@ block content
     div.row.justify-content-sm-center
       +rating("juggling", 4, 5)
       +rating("chess", 1, 5)
+
+  div.w-auto.projects
+    div.container.py-2
+      div.row.justify-content-sm-center
+        div.col.col-4.text-center
+          h2.py-2 PROJECTS
+      div.row.justify-content-sm-center
+        //- Single Card Template
+        +project('Strums', 'Enumerating all of the basic 8th note struming patterns.', '/demos/strums', 'https://github.com/wpower12/powcraft/blob/master/src/js/strums.js', 'images/strums.png')
+
+        +project('Emulator', 'Implementation of the \'Simple As Possible\' (SAP-1) architecture.', 'demos/emulator', 'https://github.com/wpower12/jsBEEBC', 'images/beebc.png')
+   
+      div.row.justify-content-sm-center
+        +project('Traffic', 'Create roads and intersections, and fill your network with cars.', 'demos/traffic', 'https://github.com/wpower12/powcraft/tree/master/src/js/traffic', 'images/ex_traffic.png')
+
+        +project('Physics', 'Simple, interactive javascript physics simulation.', 'demos/physics', 'https://github.com/wpower12/powcraft/tree/master/src/js/forces', 'images/ex_physics.png')
+
+    
 
   div.footer.ma-4.py-5.text-center
     | (tm) me. 2021-2021? idk. 

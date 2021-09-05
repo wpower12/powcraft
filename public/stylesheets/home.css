@@ -8418,7 +8418,7 @@ svg {
   width: 20%;
   display: inline; }
 
-.bio {
+.bio, .projects {
   color: #495f8a;
   background-color: #1e1624; }
 
@@ -8429,7 +8429,7 @@ svg {
   .headshot img {
     width: 75%; }
 
-h1, .h1 {
+h1, .h1, h2, .h2 {
   color: #6E85B2;
   font-family: 'Raleway';
   letter-spacing: .05rem; }
