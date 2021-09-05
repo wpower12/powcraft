@@ -65,3 +65,5 @@ SUB_LOOP
   JMP SUB_LOOP
 ONE
   1`;
+
+export default Add42;

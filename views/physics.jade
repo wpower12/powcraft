@@ -1,0 +1,39 @@
+extends layout
+
+block headers
+	link(rel='stylesheet', href='/stylesheets/forces.css')
+
+block content
+
+	.container
+		.row.text-center.justify-content-sm-center
+			.col
+				canvas(width="550", height="350")#forcecanvas.shadow.mx-2.my-3
+
+		.row.justify-content-sm-center.btn-toolbar.align-items-center
+			.col.col-3.shadow.btn-group.py-3
+				input(type='radio', name='add-toolbar', id='btn-disc', checked).btn-check
+				label(for='btn-disc').btn.btn-primary Disc
+
+				input(type='radio', name='add-toolbar', id='btn-point').btn-check
+				label(for='btn-point').btn.btn-primary Point
+
+			.col.col-3.shadow.py-3.btn-group
+				input(type='checkbox', name='main-toolbar', id='btn-stats').btn-check
+				label(for='btn-stats').btn.btn-primary Stats
+
+				input(type='checkbox', name='main-toolbar', id='btn-grid').btn-check
+				label(for='btn-grid').btn.btn-primary Grid
+
+			.col.col-2.shadow.py-3.btn-group
+				//- input(type='button', id='btn-clear').btn
+				//- label(for='btn-clear').btn.btn-primary Clear
+				button(id='btn-clear').btn.btn-primary Clear
+
+	script(src='/javascripts/forces.bundle.js')
+
+
+
+
+
+

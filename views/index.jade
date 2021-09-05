@@ -8,20 +8,33 @@ block headers
 
 block content
 
-  div.bio
-    section.px-5.py-5.text-center
-      //- h1 William Power
-      h1.py-2 WILLIAM POWER
-      div.text-start.py-4.px-5
-        p Hi. This are words I would say to make a person think I'm cool. 
-        p resume, linkedin?, research site?, github?
+  div.w-auto.bio
+    div.container
+      div.row.px-2.py-3.justify-content-sm-center
+        //- h1 William Power
+        .col.col-md-5
+          h1.py-2 WILLIAM POWER
+          div.text-start.py-4.mx-3.px-2
+            p I'm a PhD Candidate who likes to make things! I enjoy researching and tinkering. Currently researching machine learning methods for extracting community structure from online social networks. I'm interested in ways to improve election forecasting and polling using data mined from such communities. I'm always on the lookout for opportunities to help others build and learn!
+            p I work in the #[a(href='https://dabi.temple.edu/').inline-link DABI Lab], Temple Universities Data Analytics and Bioinformations group. I've also been lucky to work with the Temple AGI Team (#[a(href='https://cis.temple.edu/tagit/').inline-link TAGIT]). 
+            div.links
+              a(href='https://github.com/wpower12').btn.btn-outline-primary.shadow.mx-2
+                include ../src/images/github.svg
+              a(href='https://www.linkedin.com/in/wkp3engineer/').btn.btn-outline-primary.shadow.mx-2
+                include ../src/images/linkedin.svg
+              a(href='mailto:willpowe@gmail.com').btn.btn-outline-primary.shadow.mx-2
+                include ../src/images/email.svg
+
+
+        .col.col-md-5.headshot
+          img(src='/images/lego_grad.png').rounded
 
   div.container.projects.py-5
     div.row.justify-content-sm-center
       //- Single Card Template
-      +project('Strums', 'Enumerating all of the basic 8th note struming patterns.', '/demos/strums', 'https://github.com', 'images/ex_traffic.png')
+      +project('Strums', 'Enumerating all of the basic 8th note struming patterns.', '/demos/strums', 'https://github.com', 'images/strums.png')
 
-      +project('Emulator', 'Implementation of the \'Simple As Possible\' (SAP-1) architecture.', 'demos/emulator', 'https://github.com', 'images/ex_beebc.png')
+      +project('Emulator', 'Implementation of the \'Simple As Possible\' (SAP-1) architecture.', 'demos/emulator', 'https://github.com', 'images/beebc.png')
  
     div.row.justify-content-sm-center
       +project('Traffic', 'Create roads and intersections, and fill your network with cars.', 'demos/traffic', 'https://github.com', 'images/ex_traffic.png')
@@ -30,16 +43,16 @@ block content
 
   div.container.competencies.py-4.mb-4
 
-    div.row.justify-content-sm-center.py-2
+    div.row.justify-content-sm-center
       +rating("python", 5, 5) 
-      +rating("js", 5, 5)
-    div.row.justify-content-sm-center.py-2
+      +rating("js", 4, 5)
+    div.row.justify-content-sm-center
       +rating("html/css", 4, 5)
       +rating("java", 4, 5)
-    div.row.justify-content-sm-center.py-2
+    div.row.justify-content-sm-center
       +rating("php", 3, 5)
       +rating("sql", 3, 5)
-    div.row.justify-content-sm-center.py-2
+    div.row.justify-content-sm-center
       +rating("juggling", 4, 5)
       +rating("chess", 1, 5)
 

@@ -1,11 +1,11 @@
-EightBitComp = require("./EightBitComp").default;
-EBCGUI       = require("./EBCGUI").default;
-Assembler    = require("./Assembler").default;
-Examples     = require("./Examples");
+import EightBitComp from "./EightBitComp.js";
+import EBCGUI       from "./EBCGUI.js"
+import Assembler    from "./Assembler.js";
+import {AddSub, AddSub_Src} from "./Examples.js"; 
 
-ebc     = new EightBitComp();
-ebc_gui = new EBCGUI();
-ass     = new Assembler();
+var ebc     = new EightBitComp();
+var ebc_gui = new EBCGUI();
+var ass     = new Assembler();
 
 var DELAY = 5;
 var running = false;
@@ -17,7 +17,7 @@ function step(){
 	ebc.tick(); 
 	ebc_gui.update_elements(ebc);
 }
-btn_step = document.getElementById('clk_step');
+var btn_step = document.getElementById('clk_step');
 btn_step.onclick = step;
 
 // Start/Stop the clock - "play/pause" button
@@ -30,7 +30,7 @@ function startstop(){
 		timer = setInterval(step, DELAY);
 	}
 }
-btn_ss = document.getElementById('clk_start');
+var btn_ss = document.getElementById('clk_start');
 btn_ss.onclick = startstop;
 
 // Reset - Clear everything but the RAM
@@ -38,7 +38,7 @@ function reset(){
 	ebc.reset_not_RAM();
 	ebc_gui.update_elements(ebc);
 }
-btn_rs = document.getElementById('reset');
+var btn_rs = document.getElementById('reset');
 btn_rs.onclick = reset;
 
 // Process Code in Assembler Area
@@ -55,14 +55,14 @@ function assemble(){
 	ebc_gui.update_elements(ebc);
 	return false;
 }
-ass_txt  = document.getElementById('ass_in');
-form_ass = document.getElementById('ass_form');
+var ass_txt  = document.getElementById('ass_in');
+var form_ass = document.getElementById('ass_form');
 form_ass.onsubmit = assemble;
 
 // *** Memory Editing
-mems_dsp = [16];
-mems_inp = [16];
-mems_btn = [16];
+var mems_dsp = [16];
+var mems_inp = [16];
+var mems_btn = [16];
 var idx;
 for (var i = 0; i < 16; i++) {
 	idx = i.toString(2).padStart(4,'0');
@@ -94,8 +94,8 @@ for (var i = 0; i < 16; i++) {
 }
 
 // Load some initial code. 
-ebc.RAM = Examples.AddSub;
-ass_txt.value = Examples.AddSub_Src;
+ebc.RAM = AddSub;
+ass_txt.value = AddSub_Src;
 ebc_gui.update_elements(ebc);
 
 

@@ -8376,6 +8376,9 @@ textarea.form-control-lg {
 @font-face {
   font-family: 'Raleway-Bold';
   src: url("Raleway-Medium.ttf") format("truetype"); }
+.container {
+  color: #6E85B2; }
+
 .card {
   background-color: #3a2649;
   color: #6E85B2;
@@ -8387,11 +8390,15 @@ textarea.form-control-lg {
 .btn-outline-primary:hover {
   color: #444059; }
 
+svg {
+  fill: #726A95; }
+
 .rating {
   background-color: #1e1624;
   height: 2rem;
   vertical-align: middle;
   color: #726A95;
+  min-width: 200px;
   border-style: solid;
   border-width: 0.15rem;
   border-color: #726A95; }
@@ -8413,23 +8420,32 @@ textarea.form-control-lg {
 
 .bio {
   color: #495f8a;
-  margin-left: 0px;
   background-color: #1e1624; }
+
+.headshot {
+  text-align: center;
+  min-width: 300px;
+  vertical-align: middle; }
+  .headshot img {
+    width: 75%; }
 
 h1, .h1 {
   color: #6E85B2;
-  font-family: 'Raleway'; }
+  font-family: 'Raleway';
+  letter-spacing: .05rem; }
 
 .card {
   min-width: 300px;
+  min-height: 210px;
   border-style: solid;
   border-width: 0.15rem;
   border-color: #22132d; }
 
 .hero h3, .hero .h3 {
-  font-family: 'Raleway-Bold';
-  letter-spacing: .1rem;
-  font-size: 1.5rem;
+  font-family: 'Raleway';
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-size: 1.3rem;
   display: inline-block;
   width: 50%; }
 .hero .links {
@@ -8462,6 +8478,9 @@ h1, .h1 {
 
 .footer {
   background-color: #1e1624;
+  color: #415479; }
+
+.inline-link {
   color: #415479; }
 
 /*# sourceMappingURL=home.css.map */

@@ -48,6 +48,9 @@ $font-color: #6E85B2;
 	src: url('Raleway-Medium.ttf') format('truetype');
 }
 
+.container {
+	color: $font-color;
+}
 
 .card {
 	background-color: tint_color($body-color, 5%);

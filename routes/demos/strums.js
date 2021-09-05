@@ -1,5 +1,5 @@
 var express = require('express');
-var router = express.Router();
+var router  = express.Router();
 
 // var base_strum = "DUDUDUDU";
 var base_strum = "↓↑↓↑↓↑↓↑";
@@ -35,9 +35,6 @@ for (var row = 0; row < num_rows; row++){
   strum_grid.push(strum_patterns.splice(0, num_cols));
 }
 
-console.log(strum_grid);
-
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('strums', { strums: strum_grid });
 });

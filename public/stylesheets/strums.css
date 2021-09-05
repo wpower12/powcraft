@@ -8377,6 +8377,9 @@ textarea.form-control-lg {
 @font-face {
   font-family: 'Raleway-Bold';
   src: url("Raleway-Medium.ttf") format("truetype"); }
+.container {
+  color: #6E85B2; }
+
 .card {
   background-color: #3a2649;
   color: #6E85B2;
