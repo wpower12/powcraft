@@ -40,7 +40,7 @@ svg {
 }
 
 
-.bio {
+.bio, .projects {
 	color: darken($font-color, 15%);	
 	// margin-left: 0px;
 	background-color: $dark;
@@ -55,7 +55,7 @@ svg {
 	}
 }
 
-h1 {
+h1, h2 {
 	color: $font-color;
 	font-family: 'Raleway';
 	letter-spacing: .05rem;
