@@ -4,8 +4,10 @@ mixin project(title, description, demo_link, gh_link, img_path)
 			.hero.px-2.py-2
 				h3.fw-bold.lh-base= title
 				div.links
-					a(href=demo_link).btn.btn-outline-primary.shadow.mx-2
-						include ../../src/images/arrow-up-right.svg
+					
+					if demo_link
+						a(href=demo_link).btn.btn-outline-primary.shadow.mx-2
+							include ../../src/images/arrow-up-right.svg
 					a(href=gh_link).btn.btn-outline-primary.shadow.mx-2
 						include ../../src/images/github.svg
 			.card-body

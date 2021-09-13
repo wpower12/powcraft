@@ -8,15 +8,15 @@ block headers
 
 block content
 
-  div.w-auto.bio
-    div.container
-      div.row.px-2.py-3.justify-content-sm-center
+  .w-auto.bio
+    .container
+      .row.px-2.py-3.justify-content-sm-center
         //- h1 William Power
         .col.col-md-5
           h1.mb-4 WILLIAM POWER
 
-          div.text-start.mx-3.px-2
-            div.links.mb-4
+          .text-start.mx-3.px-2
+            .links.mb-4
               a(href='https://github.com/wpower12').btn.btn-outline-primary.shadow.mx-2
                 include ../src/images/github.svg
               a(href='https://www.linkedin.com/in/wkp3engineer/').btn.btn-outline-primary.shadow.mx-2
@@ -31,41 +31,44 @@ block content
         .col.col-md-5.headshot
           img(src='/images/lego_grad.png').rounded
 
-  div.container.competencies.py-4
+  .container.competencies.py-4
 
-    div.row.justify-content-sm-center
+    .row.justify-content-sm-center
       +rating("python", 5, 5) 
       +rating("js", 4, 5)
-    div.row.justify-content-sm-center
+    .row.justify-content-sm-center
       +rating("html/css", 4, 5)
       +rating("java", 4, 5)
-    div.row.justify-content-sm-center
+    .row.justify-content-sm-center
       +rating("php", 3, 5)
       +rating("sql", 3, 5)
-    div.row.justify-content-sm-center
-      +rating("tutoring", 5, 5)
+    .row.justify-content-sm-center
+      +rating("tutoring", 4, 5)
       +rating("juggling", 4, 5)
-    div.row.justify-content-sm-center
+    .row.justify-content-sm-center
       +rating("ukelele", 3, 5)
       +rating("chess", 1, 5)
 
-  div.w-auto.projects
-    div.container.py-2
-      div.row.justify-content-sm-center
-        div.col.col-4.text-center
+  .w-auto.projects
+    .container.py-2
+      .row.justify-content-sm-center
+        .col.col-4.text-center
           h2.py-2 PROJECTS
-      div.row.justify-content-sm-center
-        //- Single Card Template
+      .row.justify-content-sm-center
+        +project('COVID Geo', 'Scripts to marshall county-level demographic and COVID data into a PyTGeo object.  ', None, 'https://github.com/wpower12/COVID-19-USSTN', 'images/icon_network.png')
+        
+        +project('Emulator', 'Implementation of the \'Simple As Possible\' (SAP-1) architecture.', 'demos/emulator', 'https://github.com/wpower12/jsBEEBC', 'images/icon_beebc.png')
+
+      .row.justify-content-sm-center
         +project('Strums', 'Enumerating all of the basic 8th note struming patterns.', '/demos/strums', 'https://github.com/wpower12/powcraft/blob/master/src/js/strums.js', 'images/strums.png')
 
-        +project('Emulator', 'Implementation of the \'Simple As Possible\' (SAP-1) architecture.', 'demos/emulator', 'https://github.com/wpower12/jsBEEBC', 'images/beebc.png')
-   
-      div.row.justify-content-sm-center
         +project('Traffic', 'Create roads and intersections, and fill your network with cars.', 'demos/traffic', 'https://github.com/wpower12/powcraft/tree/master/src/js/traffic', 'images/ex_traffic.png')
 
+      .row.justify-content-sm-center
         +project('Physics', 'Simple, interactive javascript physics simulation.', 'demos/physics', 'https://github.com/wpower12/powcraft/tree/master/src/js/forces', 'images/ex_physics.png')
 
-    
+        +project('UnitGP', 'Using genetic programming to evolve the brain for a simple agent.', None, 'https://github.com/wpower12/UnitGP', 'images/unitgp.png')
 
-  div.footer.ma-4.py-5.text-center
-    | (tm) me. 2021-2021? idk. 
+
+  .footer.ma-4.py-5.text-center
+    | (tm) me. 2021-2021. website source #[a(href='https://github.com/wpower12/powcraft') here].
