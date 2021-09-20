@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.cjs",
+    "start": "node app.js",
     "watch-sass": "sass --watch src/scss:public/stylesheets --scss"
   },
   "type": "module",

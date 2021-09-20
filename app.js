@@ -1,4 +1,3 @@
-
 var createError  = require('http-errors');
 var express      = require('express');
 var path         = require('path');
@@ -31,7 +30,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/demos', demoRouter);
 app.use('/minimog', minimogRouter);
-
 
 // 404's and Errors
 app.use(function(req, res, next) {
