@@ -1,15 +1,24 @@
+
 var createError  = require('http-errors');
 var express      = require('express');
 var path         = require('path');
 var cookieParser = require('cookie-parser');
 var logger       = require('morgan');
+var http         = require('http');
+var { Server }   = require("socket.io");
 
-var indexRouter = require('./routes/index');
-var demoRouter  = require('./routes/demos')
+var indexRouter   = require('./routes/index');
+var demoRouter    = require('./routes/demos');
+var minimogRouter = require('./routes/minimog'); 
 
-var app = express();
+var Minimog = require('./src/js/minimog/server/Minimog');
 
-// view engine setup
+var app    = express();
+var server = http.createServer(app);
+var io     = new Server(server);
+
+var minimogServer = new Minimog(io, server);
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -21,19 +30,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/demos', demoRouter);
+app.use('/minimog', minimogRouter);
 
-// catch 404 and forward to error handler
+
+// 404's and Errors
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
   res.status(err.status || 500);
   res.render('error');
 });
