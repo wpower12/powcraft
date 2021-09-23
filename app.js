@@ -4,7 +4,7 @@ var path         = require('path');
 var cookieParser = require('cookie-parser');
 var logger       = require('morgan');
 var http         = require('http');
-var { Server }   = require("socket.io");
+// var { Server }   = require("socket.io");
 
 var indexRouter   = require('./routes/index');
 var demoRouter    = require('./routes/demos');
@@ -14,9 +14,9 @@ var Minimog = require('./src/js/minimog/server/Minimog');
 
 var app    = express();
 var server = http.createServer(app);
-var io     = new Server(server);
 
-var minimogServer = new Minimog(io, server);
+// var io     = new Server(server);
+// var minimogServer = new Minimog(io, server);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
