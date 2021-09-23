@@ -25,26 +25,26 @@ var config = {
 var game = new Phaser.Game(config);
 
 function preload () {
-    this.load.image('sky',       'assets/sky.png');
-    this.load.image('grass',     'assets/tile.png');
-    this.load.image('dirt',      'assets/dirt.png');
-    this.load.image('stone',     'assets/stone.png');
-    this.load.image('water',     'assets/water.png');
-    this.load.image('towerbase', 'assets/towerbase.png');
-    this.load.image('towertop',  'assets/towertop.png');
+    this.load.image('sky',       '/assets/sky.png');
+    this.load.image('grass',     '/assets/tile.png');
+    this.load.image('dirt',      '/assets/dirt.png');
+    this.load.image('stone',     '/assets/stone.png');
+    this.load.image('water',     '/assets/water.png');
+    this.load.image('towerbase', '/assets/towerbase.png');
+    this.load.image('towertop',  '/assets/towertop.png');
 
     //Doodad Tiles.
-    this.load.image('wall_ud', 'assets/wall_updown.png');
-    this.load.image('wall_lr', 'assets/wall_leftright.png');
-    this.load.image('trees_1', 'assets/trees_1.png');
-    this.load.image('trees_2', 'assets/trees_2.png');
-    this.load.image('trees_3', 'assets/trees_6.png');
-    this.load.image('rocks_1', 'assets/rocks_4.png');
-    this.load.image('rocks_2', 'assets/rocks_5.png');        
+    this.load.image('wall_ud', '/assets/wall_updown.png');
+    this.load.image('wall_lr', '/assets/wall_leftright.png');
+    this.load.image('trees_1', '/assets/trees_1.png');
+    this.load.image('trees_2', '/assets/trees_2.png');
+    this.load.image('trees_3', '/assets/trees_6.png');
+    this.load.image('rocks_1', '/assets/rocks_4.png');
+    this.load.image('rocks_2', '/assets/rocks_5.png');        
 
-    this.load.spritesheet('knight',         'assets/knightwalking.png',       {frameWidth: 64, frameHeight: 64});
-    this.load.spritesheet('crystal-orange', 'assets/orange_crystal_anim.png', {frameWidth: 32, frameHeight: 32})
-    this.load.spritesheet('crystal-blue',   'assets/blue_crystal_anim.png',   {frameWidth: 32, frameHeight: 32})
+    this.load.spritesheet('knight',         '/assets/knightwalking.png',       {frameWidth: 64, frameHeight: 64});
+    this.load.spritesheet('crystal-orange', '/assets/orange_crystal_anim.png', {frameWidth: 32, frameHeight: 32})
+    this.load.spritesheet('crystal-blue',   '/assets/blue_crystal_anim.png',   {frameWidth: 32, frameHeight: 32})
 }   
 
 function create () {
