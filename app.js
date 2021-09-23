@@ -10,7 +10,7 @@ var indexRouter   = require('./routes/index');
 var demoRouter    = require('./routes/demos');
 var minimogRouter = require('./routes/minimog'); 
 
-var Minimog = require('./src/js/minimog/server/Minimog');
+// var Minimog = require('./src/js/minimog/server/Minimog');
 
 var app    = express();
 var server = http.createServer(app);
