@@ -1,10 +1,9 @@
-mixin project(title, description, demo_link, gh_link, img_path)
+mixin project(title, description, demo_link, gh_link, img_path, lang_tag)
 	div.col.col-md-5
 		div.card.mb-4.px-2.py-2
 			.hero.px-2.py-2
 				h3.fw-bold.lh-base= title
 				div.links
-					
 					if demo_link
 						a(href=demo_link).btn.btn-outline-primary.shadow.mx-2
 							include ../../src/images/arrow-up-right.svg
@@ -13,3 +12,9 @@ mixin project(title, description, demo_link, gh_link, img_path)
 			.card-body
 				p.card-text.px-2= description
 				img(src=img_path).rounded
+			
+			if lang_tag
+				.position-absolute.bottom-0.end-0.mb-0.px-4
+					p.small.text-secondary.font-monospace= lang_tag
+
+		
