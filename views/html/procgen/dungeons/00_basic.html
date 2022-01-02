@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dungeon Generation</title>
+	<link href="/stylesheets/pg_main.css" rel="stylesheet">
+</head>
+<body>
+
+<section>
+	<canvas id="cnv" height="500"></canvas>
+
+	<div class="flex space-x-3">
+		<label for="cell_size">Cell Size</label>
+		<input type="number" name="cell_size" id="cell_size" value="15" min="10" max="30" class="w-20">
+
+		<label for="num_rooms">Rooms</label>
+		<input type="number" name="num_rooms" id="num_rooms" value="8" min=2 max="20" class="w-20">
+
+
+		<label for="max_size">Max Room Size</label>
+		<input type="number" name="max_size" id="max_size" value="8" min=2 max="20" class="w-20">
+	</div>
+
+	<div class="flex space-x-2">
+		<div id="gen_dungeon_btn" class="btn btn-blue">
+			<label>Generate</label>
+		</div>
+	</div>
+</section>
+
+<section>
+	<h2 class="text-bold">What?</h2>
+	<p>
+	This method procedurally generates a dungeon layout by placing randomly sized rooms, and then connecting their midpoints with hallways generated via a BFS between the room midpoints. Rooms are iteratively added to a growing connected component until all rooms are connected. 
+	</p>
+</section>
+
+</body>
+<footer>
+	<script type="text/javascript" src="../../../javascripts/dungeons_00_simple.bundle.js"></script>
+</footer>
+</html>

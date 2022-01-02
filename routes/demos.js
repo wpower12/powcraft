@@ -4,6 +4,9 @@ var router  = express.Router();
 var strumRouter = require('./demos/strums');
 router.use('/strums', strumRouter);
 
+var procGen = require('./demos/procgen');
+router.use('/procgen', procGen);
+
 router.get('/emulator', function(req, res, next) {
   res.render('beebc');
 });
