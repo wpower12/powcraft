@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>L Systems</title>
+	<link href="/stylesheets/pg_main.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+	<canvas id="cnv" height="500"></canvas>
+	
+	<div class="demo-input">
+		<label for="rules">Rules</label>
+		<textarea  id="rules" name="rules" class="font-mono">
+0: 1[0]0
+1: 11</textarea>
+	</div>
+
+	<div class="demo-input">
+		<label for="num_iters">Iterations</label>
+		<input type="range" id="num_iters" name="num_iters" min="1" max="8" step="1" value="3">
+	</div>
+
+	<div class="demo-input">
+		<label for="line_len">Line Length</label>
+		<input type="range" id="line_len" name="line_len" min="1" max="20" step="1" value="10">
+	</div>
+
+	<div class="demo-input">
+		<label for="line_w">Line Width</label>
+		<input type="range" id="line_w" name="line_w" min="1" max="5" step="1" value="3">
+	</div>
+
+	<div class="demo-input">
+		<label for="angle">Angle</label>
+		<input type="range" id="angle" name="angle" min="0" max="180" step="5" value="45">
+	</div>
+
+	<div class="demo-input">
+		<label for="rand_mag">Random Deviation</label>
+		<input type="range" id="rand_mag" name="rand_mag" min="0" max="20" step="2" value="0">
+	</div>
+
+</section>
+<section>
+	<h2 class="font-bold">L Systems</h2>
+	<h4 class="font-mono"><a href="https://github.com/wpower12/procegen-demos/blob/master/src/js/images/00_l_systems.js">src</a></h3>
+	<p> An <a href="https://en.wikipedia.org/wiki/L-system">L-system</a> presents a 'grammatical' way to build 2d images. By interpreting the symbols in a grammar as instructions for a drawing routine, in this case a simple <a href="https://en.wikipedia.org/wiki/Turtle_graphics">turtle graphics</a> object, we can use the rules of a grammar, a starting string, and a set amount of iterations as a way to generate an image. 
+	</p>
+	<br>
+	<p>In this example, we implement a simple 'grammar engine' that is capable enough to handle variations on the <a href="https://en.wikipedia.org/wiki/L-system#Example_2:_Fractal_(binary)_tree">Fractal Binary Tree</a> example.</p>
+	<br>
+	<p>This grammar engine can only handle rules that contain the characters <span class="font-mono">{0,1,[,]}</span>. The <span>0</span> character is interpreted as a 'draw branch and then leaf' instruction for the turtle. A <span>1</span> character draws an edge without a leaf. The <span>[</span> character causes the current position and angle of the turtle to be pushed to a stack, and then the angle of the turtle (direction its facing) is rotated ANGLE degrees to the left. Finally, a <span>]</span> character pops a turtle position and heading from the stack, and rotates the turtles direction ANGLE degrees to the right. 
+	</p>
+	<br>
+	<p>The rules are used to generate a final representative string by being treated as rules for a replacement grammar. The initial string is scanned, token by token, to build a new string based on the observered character. Each time a character is scanned, its 'expansion' is located in the rules. The string mapped to by the character is appended to the new string being built.
+	</p>
+	<br>
+	<p>After the set number of iterations, the final string is then interpreted to move the turtle and draw the resulting 'tree'</p>
+</section>
+</body>
+
+<footer>
+	<script type="text/javascript" src="../../../javascripts/images_00_l_systems.bundle.js"></script>
+
+</footer>
+</html>

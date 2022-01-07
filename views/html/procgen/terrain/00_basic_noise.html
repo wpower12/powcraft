@@ -15,7 +15,6 @@
 		<input type="number" name="cell_size" id="cell_size" value="15" min="10" max="30" class="w-20">
 	</div>
 
-
 	<div class="demo-input">
 		<label for="noise_scale">Noise Scale</label>
 		<input type="range" id="noise_scale" name="noise_scale" min="0.01" max="1" step="0.01" value="0.1">
@@ -39,7 +38,12 @@
 
 </section>
 <section>
-	<h2>What?</h2>
+	<h2 class="font-bold">Simplex Noise Terrain</h2>
+	<h4 class="font-mono"><a href="https://github.com/wpower12/procegen-demos/blob/master/src/js/terrain/00_basic_noise.js">src</a></h3>
+	<br>
+	<p>Smooth noise surfaces, like perlin and simple noise, allow a straight forward way to procedurally generate landscapes. In this example, a 2D simplex noise surface is used to define the height, and therefore 'tile', for each cell in a 2d map.</p>
+	<br>
+	<p>Each cells height value is sampled by scaling the cells location with a parameter meant to scale the noise surface. This parameter, along with the thresholds for water and mountain levels, have relevant controls exposed above.</p>
 </section>
 </body>
 

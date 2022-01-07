@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Using Local Points</title>
+	<link href="/stylesheets/pg_main.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+	<div class="relative">
+		<canvas id="cnv" height="500"></canvas>
+		<canvas id="mini_map" class="absolute bottom-0 right-0 border-2 rounded"></canvas>
+	</div>
+
+	<div class="demo-input">
+		<label for="cell_size">Cell Size</label>
+		<input type="number" name="cell_size" id="cell_size" value="15" min="10" max="30" class="w-20">
+	</div>
+
+	<div class="demo-input">
+		<label for="noise_scale">Noise Scale</label>
+		<input type="range" id="noise_scale" name="noise_scale" min="0.01" max="1" step="0.01" value="0.1">
+	</div>
+
+	<div class="demo-input">
+		<label for="sea_level">Sea Level</label>
+		<input type="range" id="sea_level" name="sea_level" min="-1.0" max="0.1" step="0.01">
+	</div>
+
+	<div class="demo-input">
+		<label for="mtn_level">Mountain Level</label>
+		<input type="range" id="mtn_level" name="mtn_level" min="0.1" max="1.0" step="0.01">
+	</div>
+
+	<div class="demo-input">
+		<label for="rare_noise_scale">Rare Noise Scale</label>
+		<input type="range" id="rare_noise_scale" name="rare_noise_scale" min="0.005" max="0.1" step="0.005" value="0.01">
+	</div>
+
+	<div class="flex space-x-2">
+		<div id="gen_terrain_btn" class="btn btn-blue">
+			<label>Generate</label>
+		</div>
+	</div>
+
+</section>
+<section>
+	<h2 class="font-bold">Local Min and Max</h2>
+	<h4 class="font-mono"><a href="https://github.com/wpower12/procegen-demos/blob/master/src/js/terrain/02_local_points.js">src</a></h3>
+
+	<p>One way to generate 'smooth' locations for spawns, in that they dont overlap much, is to look for local minimums and maxmimums on a noise surface.</p>
+	<br>
+	<p>In this example, locations are found by checking if a cell is a local min/max. This is done in a rather naive way, by simply looking at the values for each of the 8 adjacent cells each time a cell is painted to the map. If the value is smaller or larger than all its neighbors, its added as a 'rare spawn' location in yellow.</p>
+	<br>
+	<p>The scaling parameter for the new 'rare spawn' noise surface is exposed in a new control. The rough shape of the surface can been seen in the minimap in the lower right hand corner of the canvas. This shows a scaled down image of the noise surface, from which the local min/max of each cell is checked. 
+	</p>
+
+</section>
+</body>
+
+<footer>
+	<script type="text/javascript" src="../../../javascripts/terrain_02_local_points.bundle.js"></script>
+</footer>
+</html>

@@ -36,7 +36,19 @@
 
 </section>
 <section>
-	<h2>What?</h2>
+	<h2 class="font-bold">Moving Through 3D Noise Space</h2>
+	<h4 class="font-mono"><a href="https://github.com/wpower12/procegen-demos/blob/master/src/js/terrain/01_noise_clouds.js">src</a></h3>
+
+	<p>We can make smooth animations using a 3 dimensional noise 'surface'. If we are careful about how we define a cloud, and perhaps a notion of density, we can then look at slices of a 3D space in such a way that we get a smooth animation of clouds appearing and disappearing. </p>
+	<br>
+	<p>For our 2D map, a cloud will need to be defined as values over a grid, similar to the original noise example for the terrain grid. We can interpret a value over this grid as a 'humidity level', and assume a cloud exists in the grid cell when its value is over some threshold humidity level.</p>
+	<br>
+	<p>To find values for this new 'cloud grid', another simplex object is used. Instead of calling a 2D surface, we now call the 3D noise method. Doing this allows us to also move along a new dimension. This is important to us because of the nature of the simplex noise surface. We know values will change smoothly over the surface. So as we move along this new dimension, we will see a slow variation in the actual values in our 'slice'. We are, in fact, moving a plane 'up' into this new dimension.</p>
+	<br>
+	<p>There is added complexity because a new Z value must be tracked. The amount this Z value changes by, which is exposed as a new parameter, changes the observed speed of change in the z dimension. In other words, how quickly the clouds pop in and out of existance.
+	</p>
+	<br>
+	<p>The new Z value is also added to the x dimension of the call to the 3d noise surface. This creates the illusion of the clouds moving along with some directional wind. This 'tilts' the plane we are moving through 3D space.</p>
 </section>
 </body>
 

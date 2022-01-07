@@ -16,7 +16,7 @@
 		<input type="number" name="cell_size" id="cell_size" value="15" min="10" max="30" class="w-20">
 
 		<label for="num_rooms">Rooms</label>
-		<input type="number" name="num_rooms" id="num_rooms" value="8" min=2 max="20" class="w-20">
+		<input type="number" name="num_rooms" id="num_rooms" value="4" min=2 max="20" class="w-20">
 
 
 		<label for="max_size">Max Room Size</label>
@@ -31,9 +31,9 @@
 </section>
 
 <section>
-	<h2 class="text-bold">What?</h2>
-	<p>
-	This method procedurally generates a dungeon layout by placing randomly sized rooms, and then connecting their midpoints with hallways generated via a BFS between the room midpoints. Rooms are iteratively added to a growing connected component until all rooms are connected. 
+	<h2 class="font-bold">Room and Hallway Generation</h2>
+	<h4 class="font-mono"><a href="https://github.com/wpower12/procegen-demos/blob/master/src/js/dungeons/00_simple.js">src</a></h3>
+	<p>This method procedurally generates a dungeon layout by placing randomly sized rooms, and then connecting their midpoints with hallways generated via a BFS between the room midpoints. Rooms are iteratively added to a growing connected component until all rooms are connected. 
 	</p>
 </section>
 
