@@ -8,7 +8,8 @@ module.exports = {
 		forces:     './src/js/forces/main.js',
 		traffic:    './src/js/traffic/traffic.js',
 		tribes:     './src/js/tribes/main.js',
-		miniclient: './src/js/minimog/client/client.js'
+		miniclient: './src/js/minimog/client/client.js',
+		pg_global: './src/js/procgen/viewglobal.js'
 	},
 	output: {
 	    path: path.resolve(__dirname, 'public/javascripts'),

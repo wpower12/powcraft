@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Hi' });
 });
 
+router.get('/cubebot', function(req, res, next) {
+  res.render('cubebot');
+});
+
 module.exports = router;
