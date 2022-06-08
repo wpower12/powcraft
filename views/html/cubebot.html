@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		cubebot
+	</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/cubebot.css">
+</head>
+<body>
+
+<div class="main">
+	
+
+<div id="color-mono" class="grid-9x7">
+	<div class="cell r0 c0"></div>
+	<div class="cell r0 c1">W</div>
+	<div class="cell r0 c2">G</div>
+	<div class="cell r0 c3">R</div>
+	<div class="cell r0 c4">U</div>
+	<div class="cell r0 c5">B</div>
+	<div class="cell r0 c6">C</div>
+
+	<div class="cell r1 c0">1</div>
+	<div class="cell r1 c1"><input type="number" id="m-r1c1" min=0 value=10></div>
+	<div class="cell r1 c2"><input type="number" id="m-r1c2" min=0 value=10></div>
+	<div class="cell r1 c3"><input type="number" id="m-r1c3" min=0 value=10></div>
+	<div class="cell r1 c4"><input type="number" id="m-r1c4" min=0 value=10></div>
+	<div class="cell r1 c5"><input type="number" id="m-r1c5" min=0 value=10></div>
+	<div class="cell r1 c6"><input type="number" id="m-r1c6" min=0 value=10></div>
+
+	<div class="cell r2 c0">2</div>
+	<div class="cell r2 c1"><input type="number" id="m-r2c1" min=0 value=20></div>
+	<div class="cell r2 c2"><input type="number" id="m-r2c2" min=0 value=20></div>
+	<div class="cell r2 c3"><input type="number" id="m-r2c3" min=0 value=20></div>
+	<div class="cell r2 c4"><input type="number" id="m-r2c4" min=0 value=20></div>
+	<div class="cell r2 c5"><input type="number" id="m-r2c5" min=0 value=20></div>
+	<div class="cell r2 c6"><input type="number" id="m-r2c6" min=0 value=20></div>
+
+	<div class="cell r3 c0">3</div>
+	<div class="cell r3 c1"><input type="number" id="m-r3c1" min=0 value=10></div>
+	<div class="cell r3 c2"><input type="number" id="m-r3c2" min=0 value=10></div>
+	<div class="cell r3 c3"><input type="number" id="m-r3c3" min=0 value=10></div>
+	<div class="cell r3 c4"><input type="number" id="m-r3c4" min=0 value=10></div>
+	<div class="cell r3 c5"><input type="number" id="m-r3c5" min=0 value=10></div>
+	<div class="cell r3 c6"><input type="number" id="m-r3c6" min=0 value=10></div>
+	
+	<div class="cell r4 c0">4</div>
+	<div class="cell r4 c1"><input type="number" id="m-r4c1" min=0 value=8></div>
+	<div class="cell r4 c2"><input type="number" id="m-r4c2" min=0 value=8></div>
+	<div class="cell r4 c3"><input type="number" id="m-r4c3" min=0 value=8></div>
+	<div class="cell r4 c4"><input type="number" id="m-r4c4" min=0 value=8></div>
+	<div class="cell r4 c5"><input type="number" id="m-r4c5" min=0 value=8></div>
+	<div class="cell r4 c6"><input type="number" id="m-r4c6" min=0 value=8></div>
+
+	<div class="cell r5 c0">5</div>
+	<div class="cell r5 c1"><input type="number" id="m-r5c1" min=0 value=5></div>
+	<div class="cell r5 c2"><input type="number" id="m-r5c2" min=0 value=5></div>
+	<div class="cell r5 c3"><input type="number" id="m-r5c3" min=0 value=5></div>
+	<div class="cell r5 c4"><input type="number" id="m-r5c4" min=0 value=5></div>
+	<div class="cell r5 c5"><input type="number" id="m-r5c5" min=0 value=5></div>
+	<div class="cell r5 c6"><input type="number" id="m-r5c6" min=0 value=5></div>
+
+	<div class="cell r6 c0">6</div>
+	<div class="cell r6 c1"><input type="number" id="m-r6c1" min=0 value=5></div>
+	<div class="cell r6 c2"><input type="number" id="m-r6c2" min=0 value=5></div>
+	<div class="cell r6 c3"><input type="number" id="m-r6c3" min=0 value=5></div>
+	<div class="cell r6 c4"><input type="number" id="m-r6c4" min=0 value=5></div>
+	<div class="cell r6 c5"><input type="number" id="m-r6c5" min=0 value=5></div>
+	<div class="cell r6 c6"><input type="number" id="m-r6c6" min=0 value=5></div>
+
+	<div class="cell r7 c0">7+</div>
+	<div class="cell r7 c1"><input type="number" id="m-r7c1" min=0 value=4></div>
+	<div class="cell r7 c2"><input type="number" id="m-r7c2" min=0 value=4></div>
+	<div class="cell r7 c3"><input type="number" id="m-r7c3" min=0 value=4></div>
+	<div class="cell r7 c4"><input type="number" id="m-r7c4" min=0 value=4></div>
+	<div class="cell r7 c5"><input type="number" id="m-r7c5" min=0 value=4></div>
+	<div class="cell r7 c6"><input type="number" id="m-r7c6" min=0 value=4></div>
+
+	<div class="cell r8 c0">L</div>
+	<div class="cell r8 c1"><input type="number" id="m-r8c1" min=0 value=1></div>
+	<div class="cell r8 c2"><input type="number" id="m-r8c2" min=0 value=1></div>
+	<div class="cell r8 c3"><input type="number" id="m-r8c3" min=0 value=1></div>
+	<div class="cell r8 c4"><input type="number" id="m-r8c4" min=0 value=1></div>
+	<div class="cell r8 c5"><input type="number" id="m-r8c5" min=0 value=1></div>
+	<div class="cell r8 c6"><input type="number" id="m-r8c6" min=0 value=1></div>
+
+	<div class="cell r9 c0"> </div>
+	<div class="cell r9 c1" id="tW">7</div>
+	<div class="cell r9 c2" id="tG">7</div>
+	<div class="cell r9 c3" id="tR">7</div>
+	<div class="cell r9 c4" id="tU">7</div>
+	<div class="cell r9 c5" id="tB">7</div>
+	<div class="cell r9 c6" id="tC">7</div>
+</div>
+
+<div id="color-duos-1" class="grid-9x6">
+	<div class="cell r0 c0"></div>
+	<div class="cell r0 c1">WG</div>
+	<div class="cell r0 c2">WR</div>
+	<div class="cell r0 c3">WU</div>
+	<div class="cell r0 c4">WB</div>
+	<div class="cell r0 c5">GR</div>
+
+	<div class="cell r1 c0">1</div>
+	<div class="cell r1 c1"><input type="number" id="d1-r1c1" min=0 value=5></div>
+	<div class="cell r1 c2"><input type="number" id="d1-r1c2" min=0 value=5></div>
+	<div class="cell r1 c3"><input type="number" id="d1-r1c3" min=0 value=5></div>
+	<div class="cell r1 c4"><input type="number" id="d1-r1c4" min=0 value=5></div>
+	<div class="cell r1 c5"><input type="number" id="d1-r1c5" min=0 value=5></div>
+
+	<div class="cell r2 c0">2</div>
+	<div class="cell r2 c1"><input type="number" id="d1-r2c1" min=0 value=10></div>
+	<div class="cell r2 c2"><input type="number" id="d1-r2c2" min=0 value=10></div>
+	<div class="cell r2 c3"><input type="number" id="d1-r2c3" min=0 value=10></div>
+	<div class="cell r2 c4"><input type="number" id="d1-r2c4" min=0 value=10></div>
+	<div class="cell r2 c5"><input type="number" id="d1-r2c5" min=0 value=10></div>
+
+	<div class="cell r3 c0">3</div>
+	<div class="cell r3 c1"><input type="number" id="d1-r3c1" min=0 value=5></div>
+	<div class="cell r3 c2"><input type="number" id="d1-r3c2" min=0 value=5></div>
+	<div class="cell r3 c3"><input type="number" id="d1-r3c3" min=0 value=5></div>
+	<div class="cell r3 c4"><input type="number" id="d1-r3c4" min=0 value=5></div>
+	<div class="cell r3 c5"><input type="number" id="d1-r3c5" min=0 value=5></div>
+	
+	<div class="cell r4 c0">4</div>
+	<div class="cell r4 c1"><input type="number" id="d1-r4c1" min=0 value=4></div>
+	<div class="cell r4 c2"><input type="number" id="d1-r4c2" min=0 value=4></div>
+	<div class="cell r4 c3"><input type="number" id="d1-r4c3" min=0 value=4></div>
+	<div class="cell r4 c4"><input type="number" id="d1-r4c4" min=0 value=4></div>
+	<div class="cell r4 c5"><input type="number" id="d1-r4c5" min=0 value=4></div>
+
+	<div class="cell r5 c0">5</div>
+	<div class="cell r5 c1"><input type="number" id="d1-r5c1" min=0 value=3></div>
+	<div class="cell r5 c2"><input type="number" id="d1-r5c2" min=0 value=3></div>
+	<div class="cell r5 c3"><input type="number" id="d1-r5c3" min=0 value=3></div>
+	<div class="cell r5 c4"><input type="number" id="d1-r5c4" min=0 value=3></div>
+	<div class="cell r5 c5"><input type="number" id="d1-r5c5" min=0 value=3></div>
+
+	<div class="cell r6 c0">6</div>
+	<div class="cell r6 c1"><input type="number" id="d1-r6c1" min=0 value=2></div>
+	<div class="cell r6 c2"><input type="number" id="d1-r6c2" min=0 value=2></div>
+	<div class="cell r6 c3"><input type="number" id="d1-r6c3" min=0 value=2></div>
+	<div class="cell r6 c4"><input type="number" id="d1-r6c4" min=0 value=2></div>
+	<div class="cell r6 c5"><input type="number" id="d1-r6c5" min=0 value=2></div>
+
+	<div class="cell r7 c0">7+</div>
+	<div class="cell r7 c1"><input type="number" id="d1-r7c1" min=0 value=2></div>
+	<div class="cell r7 c2"><input type="number" id="d1-r7c2" min=0 value=2></div>
+	<div class="cell r7 c3"><input type="number" id="d1-r7c3" min=0 value=2></div>
+	<div class="cell r7 c4"><input type="number" id="d1-r7c4" min=0 value=2></div>
+	<div class="cell r7 c5"><input type="number" id="d1-r7c5" min=0 value=2></div>
+
+	<div class="cell r8 c0">L</div>
+	<div class="cell r8 c1"><input type="number" id="d1-r8c1" min=0 value=1></div>
+	<div class="cell r8 c2"><input type="number" id="d1-r8c2" min=0 value=1></div>
+	<div class="cell r8 c3"><input type="number" id="d1-r8c3" min=0 value=1></div>
+	<div class="cell r8 c4"><input type="number" id="d1-r8c4" min=0 value=1></div>
+	<div class="cell r8 c5"><input type="number" id="d1-r8c5" min=0 value=1></div>
+
+	<div class="cell r9 c0"> </div>
+	<div class="cell r9 c1" id="tWG">7</div>
+	<div class="cell r9 c2" id="tWR">7</div>
+	<div class="cell r9 c3" id="tWU">7</div>
+	<div class="cell r9 c4" id="tWB">7</div>
+	<div class="cell r9 c5" id="tGR">7</div>
+</div>
+
+<div id="color-duos-2" class="grid-9x6">
+	<div class="cell r0 c0"></div>
+	<div class="cell r0 c1">GU</div>
+	<div class="cell r0 c2">GB</div>
+	<div class="cell r0 c3">RU</div>
+	<div class="cell r0 c4">RB</div>
+	<div class="cell r0 c5">UB</div>
+
+	<div class="cell r1 c0">1</div>
+	<div class="cell r1 c1"><input type="number" id="d2-r1c1" min=0 value=5></div>
+	<div class="cell r1 c2"><input type="number" id="d2-r1c2" min=0 value=5></div>
+	<div class="cell r1 c3"><input type="number" id="d2-r1c3" min=0 value=5></div>
+	<div class="cell r1 c4"><input type="number" id="d2-r1c4" min=0 value=5></div>
+	<div class="cell r1 c5"><input type="number" id="d2-r1c5" min=0 value=5></div>
+
+	<div class="cell r2 c0">2</div>
+	<div class="cell r2 c1"><input type="number" id="d2-r2c1" min=0 value=10></div>
+	<div class="cell r2 c2"><input type="number" id="d2-r2c2" min=0 value=10></div>
+	<div class="cell r2 c3"><input type="number" id="d2-r2c3" min=0 value=10></div>
+	<div class="cell r2 c4"><input type="number" id="d2-r2c4" min=0 value=10></div>
+	<div class="cell r2 c5"><input type="number" id="d2-r2c5" min=0 value=10></div>
+
+	<div class="cell r3 c0">3</div>
+	<div class="cell r3 c1"><input type="number" id="d2-r3c1" min=0 value=5></div>
+	<div class="cell r3 c2"><input type="number" id="d2-r3c2" min=0 value=5></div>
+	<div class="cell r3 c3"><input type="number" id="d2-r3c3" min=0 value=5></div>
+	<div class="cell r3 c4"><input type="number" id="d2-r3c4" min=0 value=5></div>
+	<div class="cell r3 c5"><input type="number" id="d2-r3c5" min=0 value=5></div>
+	
+	<div class="cell r4 c0">4</div>
+	<div class="cell r4 c1"><input type="number" id="d2-r4c1" min=0 value=4></div>
+	<div class="cell r4 c2"><input type="number" id="d2-r4c2" min=0 value=4></div>
+	<div class="cell r4 c3"><input type="number" id="d2-r4c3" min=0 value=4></div>
+	<div class="cell r4 c4"><input type="number" id="d2-r4c4" min=0 value=4></div>
+	<div class="cell r4 c5"><input type="number" id="d2-r4c5" min=0 value=4></div>
+
+	<div class="cell r5 c0">5</div>
+	<div class="cell r5 c1"><input type="number" id="d2-r5c1" min=0 value=3></div>
+	<div class="cell r5 c2"><input type="number" id="d2-r5c2" min=0 value=3></div>
+	<div class="cell r5 c3"><input type="number" id="d2-r5c3" min=0 value=3></div>
+	<div class="cell r5 c4"><input type="number" id="d2-r5c4" min=0 value=3></div>
+	<div class="cell r5 c5"><input type="number" id="d2-r5c5" min=0 value=3></div>
+
+	<div class="cell r6 c0">6</div>
+	<div class="cell r6 c1"><input type="number" id="d2-r6c1" min=0 value=2></div>
+	<div class="cell r6 c2"><input type="number" id="d2-r6c2" min=0 value=2></div>
+	<div class="cell r6 c3"><input type="number" id="d2-r6c3" min=0 value=2></div>
+	<div class="cell r6 c4"><input type="number" id="d2-r6c4" min=0 value=2></div>
+	<div class="cell r6 c5"><input type="number" id="d2-r6c5" min=0 value=2></div>
+
+	<div class="cell r7 c0">7+</div>
+	<div class="cell r7 c1"><input type="number" id="d2-r7c1" min=0 value=2></div>
+	<div class="cell r7 c2"><input type="number" id="d2-r7c2" min=0 value=2></div>
+	<div class="cell r7 c3"><input type="number" id="d2-r7c3" min=0 value=2></div>
+	<div class="cell r7 c4"><input type="number" id="d2-r7c4" min=0 value=2></div>
+	<div class="cell r7 c5"><input type="number" id="d2-r7c5" min=0 value=2></div>
+
+	<div class="cell r8 c0">L</div>
+	<div class="cell r8 c1"><input type="number" id="d2-r8c1" min=0 value=1></div>
+	<div class="cell r8 c2"><input type="number" id="d2-r8c2" min=0 value=1></div>
+	<div class="cell r8 c3"><input type="number" id="d2-r8c3" min=0 value=1></div>
+	<div class="cell r8 c4"><input type="number" id="d2-r8c4" min=0 value=1></div>
+	<div class="cell r8 c5"><input type="number" id="d2-r8c5" min=0 value=1></div>
+
+	<div class="cell r9 c0"> </div>
+	<div class="cell r9 c1" id="tGU">7</div>
+	<div class="cell r9 c2" id="tGB">7</div>
+	<div class="cell r9 c3" id="tRU">7</div>
+	<div class="cell r9 c4" id="tRB">7</div>
+	<div class="cell r9 c5" id="tUB">7</div>
+</div>
+
+
+<div id="params">
+	<label for="num-players">Players</label>
+	<input type="number" name="num-players" id="num-players" value="4" min=3 max=8>	<br>
+
+	<div id="keywords" class="">
+		<label for="keyword-text">Keywords</label>
+		<textarea id="keyword-text" name="keyword-text" rows="5" cols="20">
+Mill, 10, B
+Haste, 10, G
+Lifelink, 10, W</textarea> 
+		<p>Each line (Keyword, X, Color) is interpreted as a Keyword that should be present on at least X amount of cards in the cube. The letter dictates which color the keyword is associated with when randomly assiging keyword counts to players. Players are never assigned more Keywords than they have cards in that color</p>
+	</div>
+</div>
+
+<div id="controls">
+	<input type="button" id="process" value="Generate Card Assignments"> <br>
+	<textarea readonly=true id="text-out">
+		
+	</textarea>
+</div>
+
+<div id="stats">
+	<div>Total Cards: <span id="total_cards">0</span></div>
+	<div>Cards/Player: <span id="cards_per_player">0.0</span></div>
+</div>
+
+</div>
+
+</body>
+<footer>
+	<script type="text/javascript" src="javascripts/cubebot.bundle.js"></script>
+</footer>
+</html>
