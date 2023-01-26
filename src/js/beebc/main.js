@@ -100,6 +100,3 @@ for (var i = 0; i < 16; i++) {
 ebc.RAM = AddSub;
 ass_txt.value = AddSub_Src;
 ebc_gui.update_elements(ebc);
-
-
-console.log("is anything working?")
