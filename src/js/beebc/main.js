@@ -41,12 +41,16 @@ function reset(){
 var btn_rs = document.getElementById('reset');
 btn_rs.onclick = reset;
 
+var ass_txt  = document.getElementById('ass_in');
+var form_ass = document.getElementById('ass_form');
+
 // Process Code in Assembler Area
 function assemble(){
-	src = ass_txt.value; 
-	res = ass.assemble(src); // Will return an object, so I can pass a
+	let src = document.getElementById('ass_in').value; 
+	let res = ass.assemble(src); // Will return an object, so I can pass a
 							 // error code if needed. 
 
+	console.log("assembling")
 	if(res[0] == 0){         // Error code of 0 == no error
 		ebc.RAM = res[1];    // Means we can safely dump result into ram.
 	} else {
@@ -55,9 +59,8 @@ function assemble(){
 	ebc_gui.update_elements(ebc);
 	return false;
 }
-var ass_txt  = document.getElementById('ass_in');
-var form_ass = document.getElementById('ass_form');
-form_ass.onsubmit = assemble;
+
+form_ass.onclick = assemble;
 
 // *** Memory Editing
 var mems_dsp = [16];
@@ -99,4 +102,4 @@ ass_txt.value = AddSub_Src;
 ebc_gui.update_elements(ebc);
 
 
-
+console.log("is anything working?")
