@@ -2,8 +2,11 @@ import * as Tone from 'tone'
 
 const synth = new Tone.Synth().toDestination();
 
-function playStrum(){
+async function playStrum(){
+	await Tone.start()
+
 	Tone.Transport.cancel();
+
 	let bit_string = this.getAttribute('data-bits');
 	// for each of the 8 8th notes. 
 	for (var i = 0; i < 8; i++) {
@@ -26,13 +29,17 @@ function playStrum(){
 			//            8th notes (i) to 16th notes. 
 		}
 	}
+	
 	Tone.Transport.start(); 
 
 	// additionally, lets update the 'console' with the new
 	// strum pattern. 
 	let strum_value = document.getElementById('strum-number');
 	strum_value.value = parseInt(bit_string, 2);
+
+	console.log("HI FROM METHOD")
 }
+
 
 var hels = document.getElementsByClassName('strum-pattern');
 for (var i = 0; i < hels.length; i++) {
@@ -46,3 +53,6 @@ function stopSynth(){
 
 var stop_btn = document.getElementById('stop');
 stop_btn.onclick = stopSynth;
+
+console.log("HELLO WORLD")
+
