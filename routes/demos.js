@@ -23,4 +23,8 @@ router.get('/tribes', function(req, res, next) {
   res.render('tribes');
 });
 
+router.get('/saltcalc', function(req, res, next) {
+  res.render('saltcalc');
+});
+
 module.exports = router;

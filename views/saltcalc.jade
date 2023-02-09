@@ -4,7 +4,20 @@ block headers
 	link(rel='stylesheet', href='/stylesheets/saltcalc.css')
 
 block content
-	
-	p Hello World from SaltCalc
+	.block
+		textarea(rows="20", cols="28")#decklist Pyrite Spellbomb
+	.block
+		input(type="number", value="0.6")#cmdsalt
+		label(for="salt") Commander Salt
+
+	.block
+		textarea(rows="5", cols="28")#comboterms Sacrifice
+		label(for="comboterms") Terms for CMD Combos
+	.block
+		input(type="button", value="Calculate Salt")#calcsalt
+	.block
+		d Salt score:
+		d#score 0
+			
 
 	script(src='/javascripts/saltcalc.bundle.js')
