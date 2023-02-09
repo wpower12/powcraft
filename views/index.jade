@@ -10,6 +10,7 @@ block content
 
   .w-auto.bio
     .container
+      p I work in the #[a(href='https://dabi.temple.edu/') DABI], Temple University's Data Analytics and Bioinformations group.
       .row.px-2.py-3.justify-content-sm-center
         //- h1 William Power
         .col.col-md-5
@@ -27,7 +28,13 @@ block content
                 include ../src/images/resume.svg
 
             p.py-2 I'm a PhD Candidate who likes to make things! I enjoy researching and tinkering. Currently researching machine learning methods for extracting community structure from online social networks. I'm interested in ways to improve election forecasting and polling using data mined from such communities. I'm always on the lookout for opportunities to help others build and learn!
-            p I work in the #[a(href='https://dabi.temple.edu/').inline-link DABI Lab], Temple University's Data Analytics and Bioinformations group. I've also been lucky to work with the Temple AGI Team (#[a(href='https://cis.temple.edu/tagit/').inline-link TAGIT]). 
+
+            p 
+              | I work in the 
+              a(href='https://dabi.temple.edu/') DABI
+              | , Temple University's Data Analytics and Bioinformations group. I've also been lucky to work with the Temple AGI Team (
+              a(href='https://cis.temple.edu/tagit/') TAGIT
+              | ). 
             
 
         .col.col-md-5.headshot
@@ -35,7 +42,6 @@ block content
           img(src='/images/enme.png').rounded
 
   .container.competencies.py-4
-
     .row.justify-content-sm-center
       +rating("python", 5, 5)
       +rating("sql", 5, 5)
@@ -61,7 +67,7 @@ block content
       .row.justify-content-sm-center
         +project('COVID Geo', 
           'County-level spatio-temporal COVID dataset.', 
-          None, 
+          "", 
           'https://github.com/wpower12/RedditCountyBias', 
           'images/network.png',
           'python')
@@ -69,7 +75,7 @@ block content
 
         +project('Reddit Geo', 
           'Gathering US county-level online activity data from Reddit.', 
-          None, 
+          "", 
           'https://github.com/wpower12/COVID-19-USSTN', 
           'images/reddit_nj.png',
           'python')
@@ -100,7 +106,7 @@ block content
 
         +project('UnitGP', 
           'Genetic programming evolves the brain for a simple agent.', 
-          None, 
+          "", 
           'https://github.com/wpower12/UnitGP', 
           'images/unitgp.png',
           'java')
@@ -115,7 +121,7 @@ block content
 
         +project('stss', 
           'Simple SEPTA train schedule.', 
-          None, 
+          "", 
           'https://github.com/wpower12/ssts', 
           'images/ex_ssts.png',
           'rust')
