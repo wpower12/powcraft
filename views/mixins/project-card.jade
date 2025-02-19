@@ -4,7 +4,7 @@ mixin project(title, description, demo_link, gh_link, img_path, lang_tag)
 			.hero.px-2.py-2
 				h3.fw-bold.lh-base= title
 				div.links
-					if demo_link
+					if demo_link != ""
 						a(href=demo_link).btn.btn-outline-primary.shadow.mx-2
 							include ../../src/images/arrow-up-right.svg
 					a(href=gh_link).btn.btn-outline-primary.shadow.mx-2
