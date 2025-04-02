@@ -52,6 +52,10 @@ $font-color: #6E85B2;
 	color: $font-color;
 }
 
+a:visited {
+	color: rgb(238, 130, 238);
+}
+
 .card {
 	background-color: tint_color($body-color, 5%);
 	color: $font-color;
